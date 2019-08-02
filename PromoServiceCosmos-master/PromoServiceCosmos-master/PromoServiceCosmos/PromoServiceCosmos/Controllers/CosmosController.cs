@@ -18,7 +18,7 @@ namespace PromoServiceCosmos.Controllers
             _adapter = adapter;
         }
 
-        ProductPromoCondition productPromoCondition = new ProductPromoCondition();
+       List< ProductPromoCondition >productPromoCondition = new List<ProductPromoCondition>();
 
         [HttpPost]
         public async Task<IActionResult> CreateDocument([FromBody] Promotion proms)
@@ -61,12 +61,21 @@ namespace PromoServiceCosmos.Controllers
             return Ok(result);
         }
 
+        /* [HttpPost("{id}/conditions")]
+         public async Task<IActionResult> CreateDocumentCondition(string id, [FromBody] List<ProductPromoCondition> productPromoCondition)
+         {
+             ProductPromo productPromo = await _adapter.GetDataById("PromoDatabase", "PromoCollection", id);
+             //ProductPromo productPromo = new ProductPromo();
+             productPromo.conditions = productPromoCondition;
+             var result = await _adapter.CreateDocumentCondition("PromoDatabase", "PromoCollection", productPromo);
+             return Ok(result);
+         }*/
+
         [HttpPost("{id}/conditions")]
-        public async Task<IActionResult> CreateDocumentCondition(string id, [FromBody] List<ProductPromoCondition> productPromoCondition)
+        public async Task<IActionResult> CreateDocumentCondition(string id, [FromBody] ProductPromoCondition productPromoCondition)
         {
             ProductPromo productPromo = await _adapter.GetDataById("PromoDatabase", "PromoCollection", id);
-            //ProductPromo productPromo = new ProductPromo();
-            productPromo.conditions = productPromoCondition;
+            productPromo.conditions.Add(productPromoCondition);
             var result = await _adapter.CreateDocumentCondition("PromoDatabase", "PromoCollection", productPromo);
             return Ok(result);
         }
