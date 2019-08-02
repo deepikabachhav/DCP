@@ -18,6 +18,8 @@ namespace PromoServiceCosmos.Controllers
             _adapter = adapter;
         }
 
+        ProductPromoCondition productPromoCondition = new ProductPromoCondition();
+
         [HttpPost]
         public async Task<IActionResult> CreateDocument([FromBody] Promotion proms)
         {
@@ -74,17 +76,22 @@ namespace PromoServiceCosmos.Controllers
         public async Task<IActionResult> UpdateConditions(int index, string id, [FromBody] ProductPromoCondition productPromoCondition)
         {
             ProductPromo promo = await _adapter.GetDataById("PromoDatabase", "PromoCollection", id);
-            promo.conditions.ElementAt(index);
+            var productPromoConditionInstance = promo.conditions.ElementAt(index);
 
-
-            index = productPromoCondition.index;
-            parameter = productPromoCondition.parameter;
-            opeartor = productPromoCondition.promoOperator;
-            conditionValue = productPromoCondition.conditionValue;
-            otherValue = productPromoCondition.otherValue;
-
-            var result = await _adapter.UpdateDocumentAsyncCon("PromoDatabase", "PromoCollection", productPromoCondition);
-            return Ok(result);
+             if (productPromoConditionInstance != null)
+             {
+           // productPromoConditionInstance.index = productPromoCondition.index;
+            productPromoConditionInstance.parameter = productPromoCondition.parameter;
+            productPromoConditionInstance.promoOperator = productPromoCondition.promoOperator;
+            productPromoConditionInstance.conditionValue = productPromoCondition.conditionValue;
+            productPromoConditionInstance.otherValue = productPromoCondition.otherValue;
+            }
+           else
+           {
+               return NotFound();
+            }
+                var result = await _adapter.UpdateDocumentAsyncCon("PromoDatabase", "PromoCollection", promo);
+                return Ok(result);
         }
 
         [HttpGet("{id}/conditions/{index}")]

@@ -14,15 +14,11 @@ namespace PromoServiceCosmos.Models
     public class ProductPromoCondition
     {
 
-        [Key]
+       // [Key]
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-       // [JsonProperty(PropertyName = "uuid")]
         //[DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int index { get;  set; }
-          /*static int generateId()
-            {
-                 return Interlocked.Increment(ref index);
-            }*/
+        //public int index { get;  set; }
+          
         public ProductPromoParameter parameter { get; set; }
 
         public ProductPromoOperator promoOperator {  get; set; }
@@ -33,7 +29,6 @@ namespace PromoServiceCosmos.Models
 
         public override string ToString()
         {
-            // return JsonConvert.DeserializeObject(this);
             return JsonConvert.SerializeObject(this);
         }
 

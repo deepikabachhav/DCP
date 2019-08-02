@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deepika\\Desktop\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj": {}
+    "C:\\DCP\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deepika\\Desktop\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj": {
+    "C:\\DCP\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deepika\\Desktop\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj",
+        "projectUniqueName": "C:\\DCP\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj",
         "projectName": "PromoServiceCosmos",
-        "projectPath": "C:\\Users\\deepika\\Desktop\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj",
+        "projectPath": "C:\\DCP\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\PromoServiceCosmos.csproj",
         "packagesPath": "C:\\Users\\deepika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deepika\\Desktop\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\obj\\",
+        "outputPath": "C:\\DCP\\PromoServiceCosmos-master\\PromoServiceCosmos-master\\PromoServiceCosmos\\PromoServiceCosmos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

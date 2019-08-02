@@ -148,7 +148,6 @@ namespace PromoServiceCosmos.DataAccess
 
         }
 
-
         public async Task<ProductPromoCondition> DeleteUserAsyncon(string dbName, string name, string id)
         {
             try
